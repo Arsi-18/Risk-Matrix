@@ -3,85 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risk Matrix Tool</title>
+    <title>Risk Matrix Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Understanding Risk Matrix</h1>
+    </header>
+    
+    <div id="description">
+        <h2>What is a Risk Matrix?</h2>
+        <p>A Risk Matrix is a visual tool used in risk management to assess and prioritize risks based on their likelihood of occurrence and the severity of their impact. It helps organizations identify potential risks, evaluate their significance, and make informed decisions about risk mitigation strategies.</p>
+        
+        <h3>Key Components of a Risk Matrix</h3>
+        <ul>
+            <li><strong>Likelihood:</strong> This axis typically represents the probability of a risk occurring, often categorized as:
+                <ul>
+                    <li>Rare</li>
+                    <li>Unlikely</li>
+                    <li>Possible</li>
+                    <li>Likely</li>
+                    <li>Almost Certain</li>
+                </ul>
+            </li>
+            <li><strong>Severity (Impact):</strong> This axis reflects the consequences of the risk if it occurs, often categorized as:
+                <ul>
+                    <li>Insignificant</li>
+                    <li>Minor</li>
+                    <li>Moderate</li>
+                    <li>Major</li>
+                    <li>Severe</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>How to Use a Risk Matrix</h3>
+        <ol>
+            <li>Identify Risks: Gather potential risks that could affect your project or organization.</li>
+            <li>Assess Risks: For each risk, determine its likelihood and severity.</li>
+            <li>Plot Risks: Place each risk on the matrix according to its assessed likelihood and severity.</li>
+            <li>Prioritize: Use the matrix to prioritize risks, focusing on those that are both likely and severe.</li>
+            <li>Mitigate: Develop strategies to mitigate high-priority risks.</li>
+        </ol>
+
+        <h3>Applications of a Risk Matrix</h3>
+        <ul>
+            <li><strong>Project Management:</strong> To assess risks in project planning and execution.</li>
+            <li><strong>Health and Safety:</strong> In workplaces to evaluate potential hazards.</li>
+            <li><strong>Financial Analysis:</strong> To identify financial risks and their impacts on investments.</li>
+            <li><strong>IT Security:</strong> To prioritize cybersecurity threats based on their likelihood and impact on the organization.</li>
+        </ul>
+    </div>
 
     <header>
-        <h1>Risk Matrix Tool</h1>
-        <p>A structured tool for risk assessment and management.</p>
+        <h1>Risk Matrix Generator</h1>
     </header>
 
-    <section id="intro">
-        <h2>What is a Risk Matrix?</h2>
-        <p>A Risk Matrix is a structured tool used in risk management to evaluate and prioritize risks based on their likelihood and severity.</p>
-        <h3>Practical Example</h3>
-        <p>For example, in a software project, risks like Data Loss and UI Bugs can be assessed using this tool.</p>
-    </section>
+    <div id="risk-input">
+        <input type="text" id="prompt-input" placeholder="Enter risk prompt here...">
+        <button onclick="generateRisk()">Add Risk</button>
+        <button onclick="downloadCSV()">Download CSV</button>
+    </div>
 
-    <section id="key-components">
-        <h2>Key Components of a Risk Matrix</h2>
-        <h3>Likelihood (Probability of Occurrence)</h3>
-        <ul>
-            <li><strong>Almost Certain</strong> – Highly likely to occur.</li>
-            <li><strong>Likely</strong> – Expected to happen at some point.</li>
-            <li><strong>Possible</strong> – May or may not occur.</li>
-            <li><strong>Rare</strong> – Unlikely to happen.</li>
-        </ul>
-
-        <h3>Severity (Impact of the Risk)</h3>
-        <ul>
-            <li><strong>Insignificant</strong> – Minimal impact.</li>
-            <li><strong>Minor</strong> – Small impact, system continues.</li>
-            <li><strong>Moderate</strong> – Noticeable impact, manageable.</li>
-            <li><strong>Major</strong> – Serious impact.</li>
-            <li><strong>Severe (Critical)</strong> – Catastrophic impact.</li>
-        </ul>
-    </section>
-
-    <section id="risk-matrix">
-        <h2>Risk Matrix</h2>
-        <table>
-            <tr>
-                <th>Likelihood / Severity</th>
-                <th>Insignificant (Green)</th>
-                <th>Minor (Yellow)</th>
-                <th>Moderate (Orange)</th>
-                <th>Major (Red)</th>
-                <th>Severe (Dark Red)</th>
-            </tr>
-            <tr>
-                <td>Almost Certain</td>
-                <td class="low">UI Bugs</td>
-                <td class="medium">Feature Requests</td>
-                <td class="high">Performance Issues</td>
-                <td class="very-high">Data Loss</td>
-                <td class="critical">Security Breach</td>
-            </tr>
-            <tr>
-                <td>Likely</td>
-                <td class="low">Minor API Changes</td>
-                <td class="medium">User Feedback</td>
-                <td class="high">Integration Issues</td>
-                <td class="very-high">Server Downtime</td>
-                <td class="critical">Compliance Issues</td>
-            </tr>
+    <div id="matrix-container">
+        <table id="risk-matrix">
+            <thead>
+                <tr>
+                    <th>Severity / Likelihood</th>
+                    <th>Rare</th>
+                    <th>Unlikely</th>
+                    <th>Possible</th>
+                    <th>Likely</th>
+                    <th>Almost Certain</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Insignificant</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Minor</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Moderate</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Major</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Severe</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
         </table>
-    </section>
-
-    <section id="risk-input">
-        <h2>Add a Risk</h2>
-        <label for="prompt-input">Describe the risk scenario:</label>
-        <textarea id="prompt-input" placeholder="Enter risk scenario..."></textarea>
-
-        <button onclick="generateRisk()">Generate Risk</button>
-    </section>
-
-    <section id="risk-list">
-        <h2>Risk List</h2>
-        <ul id="risks"></ul>
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
