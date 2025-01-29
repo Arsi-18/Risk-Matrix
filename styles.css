@@ -1,41 +1,57 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
 }
 
 h1, h2 {
     color: #333;
 }
 
-.risk-table {
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-.risk-table th, .risk-table td {
+th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
 }
 
-.green { background-color: #c8e6c9; }
-.yellow { background-color: #fff59d; }
-.orange { background-color: #ffcc80; }
-.red { background-color: #e57373; }
-.dark-red { background-color: #d32f2f; color: white; }
+th {
+    background-color: #ddd;
+}
 
-.highlight {
-    border: 2px solid black;
+.low { background-color: #90ee90; } /* Green */
+.medium { background-color: #f4d03f; } /* Yellow */
+.high { background-color: #f39c12; } /* Orange */
+.very-high { background-color: #e74c3c; } /* Red */
+.critical { background-color: #8b0000; color: white; } /* Dark Red */
+
+#risk-input {
+    background: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
