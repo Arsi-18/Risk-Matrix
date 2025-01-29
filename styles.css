@@ -2,21 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    background-image: url('your-background-image-url.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
+    background-color: #f4f4f4; /* Light gray background */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 h1, h2 {
-    color: #fff;
+    color: #fff; /* White text for headers */
 }
 
 h2 {
@@ -36,7 +33,7 @@ th, td {
 }
 
 th {
-    background-color: #ddd;
+    background-color: #ddd; /* Light gray for table headers */
 }
 
 .low { background-color: #90ee90; } /* Green */
@@ -46,45 +43,89 @@ th {
 .critical { background-color: #8b0000; color: white; } /* Dark Red */
 
 #risk-input {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque white */
+    padding: 20px;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 2px solid #007bff; /* Blue border */
 }
 
 input, select, textarea, button {
     display: block;
     margin: 10px 0;
     padding: 10px;
-    width: 100%;
+    width: calc(100% - 22px); /* Full width minus padding */
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
 }
 
 button {
-    background-color: #007bff;
+    background-color: #007bff; /* Blue button */
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s; /* Add transform transition */
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-textarea {
-    resize: vertical; /* Allow vertical resizing */
-    height: 100px; /* Set a default height */
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Smaller header font */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Smaller subheader font */
     }
 
     table {
-        font-size: 14px;
+        font-size: 14px; /* Smaller font for tables */
+    }
+
+    input, select, textarea, button {
+        font-size: 14px; /* Smaller font for inputs */
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em; /* Even smaller header font */
+    }
+
+    h2 {
+        font-size: 1.1em; /* Even smaller subheader font */
+    }
+
+    table {
+        font-size: 12px; /* Even smaller font for tables */
+    }
+
+    input, select, textarea, button {
+        font-size: 12px; /* Even smaller font for inputs */
+    }
+}
+
+
+
+
+   
+    
