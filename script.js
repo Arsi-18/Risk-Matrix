@@ -1,6 +1,12 @@
 function generateRisk() {
     const promptInput = document.getElementById("prompt-input").value;
 
+    // Input validation
+    if (!promptInput.trim()) {
+        alert("Please enter a valid prompt.");
+        return; // Exit the function if input is empty
+    }
+
     // Basic AI-like interpretation of the prompt
     let riskName = "Unknown Risk";
     let likelihood = "Possible";
