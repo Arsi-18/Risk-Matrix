@@ -1,29 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: #007bff;
     color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#description {
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#risk-input {
     padding: 20px;
     text-align: center;
 }
 
-h1, h2 {
-    color: #fff; /* White text for headers */
+input, button {
+    padding: 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-h2 {
-    margin-top: 20px;
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#matrix-container {
+    margin: 20px auto;
+    max-width: 800px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
@@ -33,7 +65,12 @@ th, td {
 }
 
 th {
-    background-color: #ddd; /* Light gray for table headers */
+    background-color: #ddd;
+}
+
+td {
+    height: 50px;
+    vertical-align: middle;
 }
 
 .low { background-color: #90ee90; } /* Green */
@@ -42,90 +79,9 @@ th {
 .very-high { background-color: #e74c3c; } /* Red */
 .critical { background-color: #8b0000; color: white; } /* Dark Red */
 
-#risk-input {
-    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque white */
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    border: 2px solid #007bff; /* Blue border */
-}
-
-input, select, textarea, button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: calc(100% - 22px); /* Full width minus padding */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s; /* Smooth transition for border color */
-}
-
-input:focus, select:focus, textarea:focus {
-    border-color: #007bff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
-
-button {
-    background-color: #007bff; /* Blue button */
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Add transform transition */
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.5em; /* Smaller header font */
-    }
-
-    h2 {
-        font-size: 1.2em; /* Smaller subheader font */
-    }
-
-    table {
-        font-size: 14px; /* Smaller font for tables */
-    }
-
-    input, select, textarea, button {
-        font-size: 14px; /* Smaller font for inputs */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.2em; /* Even smaller header font */
-    }
-
-    h2 {
-        font-size: 1.1em; /* Even smaller subheader font */
-    }
-
-    table {
-        font-size: 12px; /* Even smaller font for tables */
-    }
-
-    input, select, textarea, button {
-        font-size: 12px; /* Even smaller font for inputs */
-    }
-}
-
-
-
-
+    
+   
+    
+   
    
     
