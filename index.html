@@ -3,99 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risk Assessment Matrix</title>
+    <title>Risk Matrix Tool</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Understanding Risks in Software Projects</h1>
-        <p>In software development, risks are uncertainties that can affect the success of a project. Learning how to identify, assess, and manage these risks is crucial for project success.</p>
 
-        <h2 class="header">Example Project: Simple To-Do List App</h2>
-        <div class="content">
-            <p>The project is a simple To-Do List application that allows users to add, edit, and delete tasks. The goal is to create a user-friendly interface that helps users manage their daily tasks efficiently.</p>
-        </div>
+    <header>
+        <h1>Risk Matrix Tool</h1>
+        <p>A structured tool for risk assessment and management.</p>
+    </header>
 
-        <h2 class="header">Creating a Risk Matrix</h2>
-        <div class="content">
-            <p>Here’s a simple example of a risk matrix for our To-Do List App:</p>
-            <table class="risk-table">
-                <thead>
-                    <tr>
-                        <th>Likelihood / Severity</th>
-                        <th>Insignificant (Green)</th>
-                        <th>Minor (Yellow)</th>
-                        <th>Moderate (Orange)</th>
-                        <th>Major (Red)</th>
-                        <th>Severe (Dark Red)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Almost Certain</td>
-                        <td class="green">Low (UI Bugs)</td>
-                        <td class="yellow">Medium (Minor Feature Requests)</td>
-                        <td class="orange">High (Performance Issues)</td>
-                        <td class="red">Very High (Data Loss)</td>
-                        <td class="dark-red">Critical (Security Breach)</td>
-                    </tr>
-                    <tr>
-                        <td>Likely</td>
-                        <td class="green">Low (Minor API Changes)</td>
-                        <td class="yellow">Medium (User Feedback)</td>
-                        <td class="orange">High (Integration Issues)</td>
-                        <td class="red">Very High (Server Downtime)</td>
-                        <td class="dark-red">Critical (Compliance Issues)</td>
-                    </tr>
-                    <tr>
-                        <td>Possible</td>
-                        <td class="green">Low (Documentation Gaps)</td>
-                        <td class="yellow">Medium (Feature Overlap)</td>
-                        <td class="orange">High (User Adoption)</td>
-                        <td class="red">Very High (Budget Overrun)</td>
-                        <td class="dark-red">Critical (Project Scope Creep)</td>
-                    </tr>
-                    <tr>
-                        <td>Rare</td>
-                        <td class="green">Low (Unforeseen Bugs)</td>
-                        <td class="yellow">Medium (Market Changes)</td>
-                        <td class="orange">High (Team Turnover)</td>
-                        <td class="red">Very High (Natural Disasters)</td>
-                        <td class="dark-red">Critical (Company Bankruptcy)</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>The table shows a Risk Assessment Matrix, a tool for evaluating and prioritizing risks by categorizing them based on their likelihood and severity. The vertical axis represents likelihood levels (Almost Certain, Likely, Possible, Rare), while the horizontal axis indicates severity levels (Insignificant, Minor, Moderate, Major, Severe). The intersection of these axes assigns a risk level (Low, Medium, High, Very High, Critical), with each cell containing examples of risks that fit the combination of likelihood and severity. For example, a security breach might be Critical (Almost Certain + Severe), while unforeseen bugs could be Low (Rare + Insignificant). The matrix is color-coded to visually highlight the most critical risks, helping teams prioritize actions and resources. This tool provides clarity by visually communicating risks, guiding teams to focus on urgent issues while monitoring lower-priority risks.</p>
-        </div>
+    <section id="intro">
+        <h2>What is a Risk Matrix?</h2>
+        <p>A Risk Matrix is a structured tool used in risk management to evaluate and prioritize risks...</p>
+    </section>
 
-        <h2 class="header">How to Do a Risk Matrix Effectively</h2>
-        <div class="content">
-            <p>To create an effective risk matrix, follow these tips:</p>
-            <ol>
-                <li><strong>Involve Your Team:</strong> Collaborate with team members to identify and assess risks. Diverse perspectives can uncover more risks.</li>
-                <li><strong>Be Honest:</strong> Assess risks realistically. Avoid underestimating or overestimating risks based on personal biases.</li>
-                <li><strong>Regularly Update:</strong> Review and update the risk matrix regularly as the project progresses. New risks may emerge, and existing risks may change.</li>
-                <li><strong>Document Everything:</strong> Keep a record of identified risks, their assessments, and mitigation strategies. This helps in tracking progress and learning for future projects.</li>
-                <li><strong>Communicate Clearly:</strong> Share the risk matrix with all stakeholders. Ensure everyone understands the risks and the actions being taken to manage them.</li>
-            </ol>
-        </div>
+    <section id="key-components">
+        <h2>Key Components of a Risk Matrix</h2>
+        <h3>Likelihood (Probability of Occurrence)</h3>
+        <ul>
+            <li><strong>Almost Certain</strong> – Highly likely to occur.</li>
+            <li><strong>Likely</strong> – Expected to happen at some point.</li>
+            <li><strong>Possible</strong> – May or may not occur.</li>
+            <li><strong>Rare</strong> – Unlikely to happen.</li>
+        </ul>
 
-        <h2 class="header">Where to Use a Risk Matrix</h2>
-        <div class="content">
-            <p>You can use a risk matrix in various situations, including:</p>
-            <ul>
-                <li>Project planning and management</li>
-                <li>Software development</li>
-                <li>Event planning</li>
-                <li>Business strategy and decision-making</li>
-            </ul>
-        </div>
+        <h3>Severity (Impact of the Risk)</h3>
+        <ul>
+            <li><strong>Insignificant</strong> – Minimal impact.</li>
+            <li><strong>Minor</strong> – Small impact, system continues.</li>
+            <li><strong>Moderate</strong> – Noticeable impact, manageable.</li>
+            <li><strong>Major</strong> – Serious impact.</li>
+            <li><strong>Severe (Critical)</strong> – Catastrophic impact.</li>
+        </ul>
+    </section>
 
-        <h2 class="header">Conclusion</h2>
-        <div class="content">
-            <p>By understanding and using a risk matrix effectively, you can manage risks in your projects, ensuring better outcomes and fewer surprises along the way.</p>
-        </div>
-    </div>
+    <section id="risk-matrix">
+        <h2>Risk Matrix</h2>
+        <table>
+            <tr>
+                <th>Likelihood / Severity</th>
+                <th>Insignificant (Green)</th>
+                <th>Minor (Yellow)</th>
+                <th>Moderate (Orange)</th>
+                <th>Major (Red)</th>
+                <th>Severe (Dark Red)</th>
+            </tr>
+            <tr>
+                <td>Almost Certain</td>
+                <td class="low">UI Bugs</td>
+                <td class="medium">Feature Requests</td>
+                <td class="high">Performance Issues</td>
+                <td class="very-high">Data Loss</td>
+                <td class="critical">Security Breach</td>
+            </tr>
+            <tr>
+                <td>Likely</td>
+                <td class="low">Minor API Changes</td>
+                <td class="medium">User Feedback</td>
+                <td class="high">Integration Issues</td>
+                <td class="very-high">Server Downtime</td>
+                <td class="critical">Compliance Issues</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="risk-input">
+        <h2>Add a Risk</h2>
+        <label for="risk-name">Risk Name:</label>
+        <input type="text" id="risk-name" placeholder="Enter risk name">
+        
+        <label for="likelihood">Likelihood:</label>
+        <select id="likelihood">
+            <option value="Almost Certain">Almost Certain</option>
+            <option value="Likely">Likely</option>
+            <option value="Possible">Possible</option>
+            <option value="Rare">Rare</option>
+        </select>
+
+        <label for="severity">Severity:</label>
+        <select id="severity">
+            <option value="Insignificant">Insignificant</option>
+            <option value="Minor">Minor</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Major">Major</option>
+            <option value="Severe">Severe</option>
+        </select>
+
+        <button onclick="addRisk()">Add Risk</button>
+    </section>
+
+    <section id="risk-list">
+        <h2>Risk List</h2>
+        <ul id="risks"></ul>
+    </section>
 
     <script src="script.js"></script>
 </body>
