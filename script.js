@@ -27,22 +27,44 @@ function generateRisk() {
         severity = "Minor";
     }
 
-    addRiskToList(riskName, likelihood, severity);
+    addRiskToMatrix(riskName, likelihood, severity);
     document.getElementById("prompt-input").value = ""; // Clear the input
 }
 
-function addRiskToList(riskName, likelihood, severity) {
-    const riskList = document.getElementById("risks");
-    const newRisk = document.createElement("li");
-    newRisk.textContent = `${riskName} - Likelihood: ${likelihood}, Severity: ${severity}`;
+function addRiskToMatrix(riskName, likelihood, severity) {
+    const matrix = document.getElementById("risk-matrix").getElementsByTagName("tbody")[0];
+    let likelihoodIndex = ["Rare", "Unlikely", "Possible", "Likely", "Almost Certain"].indexOf(likelihood);
+    let severityIndex = ["Insignificant", "Minor", "Moderate", "Major", "Severe"].indexOf(severity);
 
-    let riskClass = "";
-    if (severity === "Insignificant") riskClass = "low";
-    else if (severity === "Minor") riskClass = "medium";
-    else if (severity === "Moderate") riskClass = "high";
-    else if (severity === "Major") riskClass = "very-high";
-    else if (severity === "Severe") riskClass = "critical";
+    if (likelihoodIndex !== -1 && severityIndex !== -1) {
+        const cell = matrix.rows[severityIndex].cells[likelihoodIndex + 1]; // +1 to skip the header
+        cell.textContent += `${riskName}; `;
+        cell.classList.add(getRiskClass(severity));
+    }
+}
 
-    newRisk.classList.add(riskClass);
-    riskList.appendChild(newRisk);
+function getRiskClass(severity) {
+    if (severity === "Insignificant") return "low";
+    else if (severity === "Minor") return "medium";
+    else if (severity === "Moderate") return "high";
+    else if (severity === "Major") return "very-high";
+    else if (severity === "Severe") return "critical";
+    return "";
+}
+
+function downloadCSV() {
+    const matrix = document.getElementById("risk-matrix");
+    let csv = [];
+    for (let row of matrix.rows) {
+        let rowData = [];
+        for (let cell of row.cells) {
+            rowData.push(cell.textContent.trim());
+        }
+        csv.push(rowData.join(","));
+    }
+    const csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+    const downloadLink = document.createElement("a");
+    downloadLink.href = URL.createObjectURL(csvFile);
+    downloadLink.download = "risk_matrix.csv";
+    downloadLink.click();
 }
