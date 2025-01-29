@@ -15,7 +15,9 @@
 
     <section id="intro">
         <h2>What is a Risk Matrix?</h2>
-        <p>A Risk Matrix is a structured tool used in risk management to evaluate and prioritize risks...</p>
+        <p>A Risk Matrix is a structured tool used in risk management to evaluate and prioritize risks based on their likelihood and severity.</p>
+        <h3>Practical Example</h3>
+        <p>For example, in a software project, risks like Data Loss and UI Bugs can be assessed using this tool.</p>
     </section>
 
     <section id="key-components">
@@ -70,27 +72,10 @@
 
     <section id="risk-input">
         <h2>Add a Risk</h2>
-        <label for="risk-name">Risk Name:</label>
-        <input type="text" id="risk-name" placeholder="Enter risk name">
-        
-        <label for="likelihood">Likelihood:</label>
-        <select id="likelihood">
-            <option value="Almost Certain">Almost Certain</option>
-            <option value="Likely">Likely</option>
-            <option value="Possible">Possible</option>
-            <option value="Rare">Rare</option>
-        </select>
+        <label for="prompt-input">Describe the risk scenario:</label>
+        <textarea id="prompt-input" placeholder="Enter risk scenario..."></textarea>
 
-        <label for="severity">Severity:</label>
-        <select id="severity">
-            <option value="Insignificant">Insignificant</option>
-            <option value="Minor">Minor</option>
-            <option value="Moderate">Moderate</option>
-            <option value="Major">Major</option>
-            <option value="Severe">Severe</option>
-        </select>
-
-        <button onclick="addRisk()">Add Risk</button>
+        <button onclick="generateRisk()">Generate Risk</button>
     </section>
 
     <section id="risk-list">
@@ -101,3 +86,8 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+           
+                
+
+   
